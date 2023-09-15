@@ -1,0 +1,74 @@
+.container {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: #eee;
+    width: 90%;
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: -0.1em 0.1em 0.2em #359980;
+}
+
+.attrib{
+    padding: 15px;
+    display: flex;
+    gap: 1rem;
+}
+
+.cardAttrib {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 2rem;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnEditar {
+    border: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 6px;
+    background-color: #359980;
+    color: #eee;
+}
+
+.formContainer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formEmpresa {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 50%;
+}
+
+input {
+    border: 0.5px solid #d6d6d6;
+    border-radius: 6px;
+    padding: 0.3rem 0.3rem 0.3rem 0.5rem;
+
+}
+
+.btnSalvar {
+    margin-top: 1rem;
+    margin-left: 40%;
+    margin-right: 40%;
+    border: none;
+    border-radius: 6px;
+    background-color: #359980;
+    color: #eee;
+}

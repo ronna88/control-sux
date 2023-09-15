@@ -1,0 +1,8 @@
+.menu {
+    display: flex;
+    gap: 10px
+}
+
+.btnDropdown {
+    border: none;
+}
