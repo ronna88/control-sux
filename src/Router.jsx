@@ -20,6 +20,9 @@ import { FormClientePJ } from "./components/ClientePJ/FormClientePJ";
 import { ListaAtivos } from "./components/Ativos/ListaAtivos";
 import { DetalhesAtivo } from "./components/Ativos/DetalhesAtivo";
 import { FormAtivo } from "./components/Ativos/FormAtivo";
+import { ListaContratos } from "./components/Contratos/ListaContratos";
+import { DetalhesContrato } from "./components/Contratos/DetalhesContrato";
+import { FormContrato } from "./components/Contratos/FormContrato";
 
 
 export function Router() {
@@ -96,7 +99,12 @@ export function Router() {
                 <Route path="/ativo/novo" element={<FormAtivo />} />
 
 
-                <Route path="/contrato" element={<Contratos />} />
+                <Route path="/contrato" element={<ListaContratos />} />
+                <Route path="/contrato/:contratoId" element={<DetalhesContrato />} />
+                <Route path="/contrato/:contratoId/editar" element={<FormContrato />} />
+                <Route path="/contrato/novo" element={<FormContrato />} />
+
+
                 <Route path="/visita" element={<Visitas />} />
                 <Route path="/funcionario" element={<Funcionarios />} />
                 <Route path="/fechamento" element={<Fechamentos />} />

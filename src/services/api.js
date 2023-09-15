@@ -3,6 +3,10 @@ import axios from "axios";
 const baseUrl = "http://localhost:7000";
 
 
+export const getAllClientes = async () => {
+    return await axios.get(`${baseUrl}/cliente`);
+}
+//////////////////////////////////////////////////////////////////////////////////
 export const getAllEmpresas = async () => {
     return await axios.get(`${baseUrl}/empresa`);
 }
@@ -78,5 +82,24 @@ export const createAtivo = async (ativo) => {
     console.log("Criar Ativo...");
     return axios.post(`${baseUrl}/ativo/novo`, {
         ...ativo
+    });
+}
+/////////////////////////////////////////////////////////////////////////////////////
+export const getAllContratos = async () => {
+    return await axios.get(`${baseUrl}/contrato`);
+}
+export const getContrato = async (contratoId) => {
+    return await axios.get(`${baseUrl}/contrato/${contratoId}`);
+}
+export const saveContrato = async (contrato) => {
+    console.log("Atualizar Contrato");
+    return axios.put(`${baseUrl}/contrato/${contrato.contratoId}`, {
+        ...contrato
+    });
+}
+export const createContrato = async (contrato) => {
+    console.log("Criar Contrato...");
+    return axios.post(`${baseUrl}/contrato/novo`, {
+        ...contrato
     });
 }
