@@ -41,38 +41,3 @@
     background-color: #359980;
     color: #eee;
 }
-
-.formContainer {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.formEmpresa {
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
-    width: 50%;
-}
-
-input {
-    border: 0.5px solid #d6d6d6;
-    border-radius: 6px;
-    padding: 0.3rem 0.3rem 0.3rem 0.5rem;
-
-}
-.label {
-    margin-top: 1rem;
-    font-weight: bold;
-}
-
-.btnSalvar {
-    margin-top: 1rem;
-    margin-left: 40%;
-    margin-right: 40%;
-    border: none;
-    border-radius: 6px;
-    background-color: #359980;
-    color: #eee;
-}

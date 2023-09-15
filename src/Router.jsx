@@ -5,7 +5,6 @@ import { Contratos } from "./components/Contratos"
 import { Visitas } from "./components/Visitas"
 import { Funcionarios } from "./components/Funcionarios"
 import { Fechamentos } from "./components/Fechamentos"
-import { ClientePJ } from "./components/ClientePJ";
 import { ListaEmpresas } from "./components/Empresas/ListaEmpresas";
 import { DetalhesEmpresa } from "./components/Empresas/DetalhesEmpresa";
 import { FormEmpresa } from "./components/Empresas/FormEmpresa";
@@ -15,6 +14,9 @@ import { ListaClientePF } from "./components/ClientePF/ListaClientePF";
 import { ClienteProvider } from "./contexts/clienteContext";
 import { DetalhesClientePF } from "./components/ClientePF/DetalhesClientePF";
 import { FormClientePF } from "./components/ClientePF/FormClientePF";
+import { ListaClientePJ } from "./components/ClientePJ/ListaClientePJ";
+import { DetalhesClientePJ } from "./components/ClientePJ/DetalhesClientePJ";
+import { FormClientePJ } from "./components/ClientePJ/FormClientePJ";
 
 
 export function Router() {
@@ -68,11 +70,22 @@ export function Router() {
                         </ClienteProvider>
                     }  />
 
-
-
-
-                <Route path="/cliente/pj" element={<ClienteProvider><ClientePJ /></ClienteProvider>} />
-
+                <Route path="/cliente/pj" element={<ClienteProvider><ListaClientePJ /></ClienteProvider>} />
+                <Route path="/cliente/pj/:clienteId" element={
+                        <ClienteProvider>
+                            <DetalhesClientePJ />
+                        </ClienteProvider>
+                    }  />
+                <Route path="/cliente/pj/:clienteId/editar" element={
+                        <ClienteProvider>
+                            <FormClientePJ />
+                        </ClienteProvider>
+                }  />    
+                <Route path="/cliente/pj/novo" element={
+                        <ClienteProvider>
+                            <FormClientePJ />
+                        </ClienteProvider>
+                    }  />
 
                 <Route path="/ativo" element={<Ativos />} />
                 <Route path="/contrato" element={<Contratos />} />

@@ -73,7 +73,7 @@ export function FormClientePF() {
             .then((res) => {
                 clearCliente();
                 setCliente('');
-                navigate(`/cliente`);
+                navigate(`/cliente/pf`);
             })
             .catch((error)=> {
                 console.log(error);
@@ -98,25 +98,46 @@ export function FormClientePF() {
                         <div className={style.formContainer}>
                             <form className={style.formEmpresa}>
                                 <SelectEmpresa setCliente={setCliente} cliente={cliente}/>
-                                <input type="text" placeholder="Nome" onChange={(e) => { 
+                                
+                                <label for="nome" className={style.label}>Nome</label>
+                                <input id="nome" type="text" placeholder="Nome" onChange={(e) => { 
                                     setCliente({...cliente, clienteNome:e.target.value}) }} value={cliente.clienteNome} />
-                                <input type="text" placeholder="CPF" onChange={(e) => { 
+                                
+                                
+                                <label for="cpf" className={style.label}>CPF</label>
+                                <input id="cpf" type="text" placeholder="CPF" onChange={(e) => { 
                                     setCliente({...cliente, clienteCPF:e.target.value}) }} value={cliente.clienteCPF} />
-                                <input type="text" placeholder="Telefone" onChange={(e) => { 
+                                
+                                <label for="telefone" className={style.label}>Telefone</label>
+                                <input id="telefone" type="text" placeholder="Telefone" onChange={(e) => { 
                                     setCliente({...cliente, clienteTelefone:e.target.value}) }} value={ cliente.clienteTelefone } />
-                                <input type="text" placeholder="Email" onChange={(e) => { 
+                                
+                                <label for="email" className={style.label}>Email</label>
+                                <input id="email" type="text" placeholder="Email" onChange={(e) => { 
                                     setCliente({...cliente, clienteEmail:e.target.value}) }} value={cliente.clienteEmail} />
-                                <input type="text" placeholder="Endereço" onChange={(e) => { 
+                                
+                                <label for="endereco" className={style.label}>Endereço</label>
+                                <input id="endereco" type="text" placeholder="Endereço" onChange={(e) => { 
                                     setCliente({...cliente, clienteEndereco:e.target.value}) }} value={cliente.clienteEndereco} />
-                                <input type="text" placeholder="Numero" onChange={(e) => { 
+                                
+                                <label for="numero" className={style.label}>Número</label>
+                                <input id="numero" type="text" placeholder="Numero" onChange={(e) => { 
                                     setCliente({...cliente, clienteNumero:e.target.value}) }} value={cliente.clienteNumero} />
-                                <input type="text" placeholder="Bairro" onChange={(e) => { 
+                                
+                                <label for="bairro" className={style.label}>Bairro</label>
+                                <input id="bairro" type="text" placeholder="Bairro" onChange={(e) => { 
                                     setCliente({...cliente, clienteBairro:e.target.value}) }} value={cliente.clienteBairro} />
-                                <input type="text" placeholder="Cidade" onChange={(e) => { 
+                                
+                                <label for="cidade" className={style.label}>Cidade</label>
+                                <input id="cidade" type="text" placeholder="Cidade" onChange={(e) => { 
                                     setCliente({...cliente, clienteCidade:e.target.value}) }} value={cliente.clienteCidade} />
-                                <input type="text" placeholder="UF" onChange={(e) => { 
+                                
+                                <label for="uf" className={style.label}>UF</label>
+                                <input id="uf" type="text" placeholder="UF" onChange={(e) => { 
                                     setCliente({...cliente, clienteUF:e.target.value}) }} value={cliente.clienteUF} />
-                                <input type="text" placeholder="CEP" onChange={(e) => { 
+                                
+                                <label for="cep" className={style.label}>CEP</label>
+                                <input id="cep" type="text" placeholder="CEP" onChange={(e) => { 
                                     setCliente({...cliente, clienteCEP:e.target.value}) }} value={cliente.clienteCEP} />
                                
                                 <button className={style.btnSalvar} onClick={(e) => handleSubmit(e)}>Salvar</button>

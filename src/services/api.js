@@ -31,6 +31,9 @@ export const getAllClientesPF = async () => {
 export const getCliente = async (clienteId) => {
     return await axios.get(`${baseUrl}/cliente/pf/${clienteId}`);
 }
+export const getClientePJ = async (clienteId) => {
+    return await axios.get(`${baseUrl}/cliente/pj/${clienteId}`);
+}
 
 export const saveClientePF = async (cliente) => {
     console.log("Atualizar Cliente PF");
@@ -45,4 +48,8 @@ export const createClientePF = async (cliente) => {
     return axios.post(`${baseUrl}/cliente/pf/novo`, {
         ...cliente
     });
+}
+
+export const getAllClientesPJ = async () => {
+    return await axios.get(`${baseUrl}/cliente/pj`);
 }

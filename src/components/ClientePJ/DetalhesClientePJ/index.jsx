@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ClienteContext } from "../../../contexts/clienteContext";
 import { getCliente } from "../../../services/api";
 
-export function DetalhesClientePF() {
+export function DetalhesClientePJ() {
 
     const navigate = useNavigate();
     const { clienteId } = useParams();
@@ -21,7 +21,7 @@ export function DetalhesClientePF() {
     }, [])
 
     function handleButtonClick() {
-        navigate(`/cliente/pf/${selCliente.clienteId}/editar`);
+        navigate(`/cliente/pj/${selCliente.clienteId}/editar`);
     }
 
 
@@ -57,8 +57,8 @@ export function DetalhesClientePF() {
                             </div>
                             <div className="details-card">
                                 <div className={style.attrib}>
-                                    <strong>CPF:</strong>
-                                    <span>{selCliente.clienteCPF}</span>
+                                    <strong>CNPJ:</strong>
+                                    <span>{selCliente.clienteCNPJ}</span>
                                 </div>
                             </div>
                             <div className="details-card">
