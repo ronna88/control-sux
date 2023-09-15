@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { ClienteContext } from "../../../contexts/clienteContext";
 import style from "./styles.module.css";
-import { createClientePF, getCliente, getClientePJ, saveClientePF } from "../../../services/api";
+import { createClientePJ, getClientePJ, saveClientePJ } from "../../../services/api";
 import { useNavigate, useParams } from "react-router-dom";
 import { SelectEmpresa } from "../../SelectEmpresas";
 
@@ -74,7 +74,7 @@ export function FormClientePJ() {
                     console.log(error);
                 })
         } else {
-            createClientePF(cliente)
+            createClientePJ(cliente)
                 .then((res) => {
                     clearCliente();
                     setCliente('');
@@ -117,7 +117,7 @@ export function FormClientePJ() {
 
                                 <label for="cnpj" className={style.label}>CNPJ</label>
                                 <input id="cnpj" type="text" placeholder="CNPJ" onChange={(e) => {
-                                    setCliente({ ...cliente, clienteCPF: e.target.value })
+                                    setCliente({ ...cliente, clienteCNPJ: e.target.value })
                                 }} value={cliente.clienteCNPJ} />
 
                                 <label for="ie" className={style.label}>Inscrição Estadual</label>

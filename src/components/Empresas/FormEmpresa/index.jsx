@@ -84,12 +84,30 @@ export function FormEmpresa() {
                         </div>
                         <div className={style.formContainer}>
                             <form className={style.formEmpresa}>
-                                <input type="text" placeholder="Nome Fantasia" onChange={(e) => { setEmpresa({ ...empresa, empresaNomeFantasia: e.target.value }) }} value={empresa.empresaNomeFantasia} />
-                                <input type="text" placeholder="CNPJ" onChange={(e) => { setEmpresa({ ...empresa, empresaCNPJ: e.target.value }) }} value={empresa.empresaCNPJ} />
-                                <input type="text" placeholder="Inscrição Estadual" onChange={(e) => { setEmpresa({ ...empresa, empresaInscricaoEstadual: e.target.value }) }} value={empresa.empresaInscricaoEstadual} />
-                                <input type="text" placeholder="Endereço" onChange={(e) => { setEmpresa({ ...empresa, empresaEndereco: e.target.value }) }} value={empresa.empresaEndereco} />
-                                <input type="text" placeholder="Email" onChange={(e) => { setEmpresa({ ...empresa, empresaEmail: e.target.value }) }} value={empresa.empresaEmail} />
-                                <input type="text" placeholder="Telefone" onChange={(e) => { setEmpresa({ ...empresa, empresaTelefone: e.target.value }) }} value={empresa.empresaTelefone} />
+                                <label for="fantasia" className={style.label}>Nome Fantasia</label>
+                                <input id="fantasia" type="text" placeholder="Nome Fantasia" onChange={(e) => { 
+                                    setEmpresa({ ...empresa, empresaNomeFantasia: e.target.value }) }} value={empresa.empresaNomeFantasia} />
+
+                                <label for="cnpj" className={style.label}>CNPJ</label>
+                                <input id="cnpj" type="text" placeholder="CNPJ" onChange={(e) => { 
+                                    setEmpresa({ ...empresa, empresaCNPJ: e.target.value }) }} value={empresa.empresaCNPJ} />
+                                
+                                <label for="ie" className={style.label}>Inscrição Estadual</label>
+                                <input id="ie" type="text" placeholder="Inscrição Estadual" onChange={(e) => { 
+                                    setEmpresa({ ...empresa, empresaInscricaoEstadual: e.target.value }) }} value={empresa.empresaInscricaoEstadual} />
+                                
+                                <label for="endereco" className={style.label}>Endereço</label>
+                                <input id="endereco" type="text" placeholder="Endereço" onChange={(e) => { 
+                                    setEmpresa({ ...empresa, empresaEndereco: e.target.value }) }} value={empresa.empresaEndereco} />
+                                
+                                <label for="email" className={style.label}>Email</label>
+                                <input id="email" type="text" placeholder="Email" onChange={(e) => { 
+                                    setEmpresa({ ...empresa, empresaEmail: e.target.value }) }} value={empresa.empresaEmail} />
+                                
+                                <label for="telefone" className={style.label}>Telefone</label>
+                                <input id="telefone" type="text" placeholder="Telefone" onChange={(e) => { 
+                                    setEmpresa({ ...empresa, empresaTelefone: e.target.value }) }} value={empresa.empresaTelefone} />
+                                
                                 <button className={style.btnSalvar} onClick={(e) => handleSubmit(e)}>Salvar</button>
                             </form>
                         </div>

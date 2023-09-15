@@ -17,6 +17,9 @@ import { FormClientePF } from "./components/ClientePF/FormClientePF";
 import { ListaClientePJ } from "./components/ClientePJ/ListaClientePJ";
 import { DetalhesClientePJ } from "./components/ClientePJ/DetalhesClientePJ";
 import { FormClientePJ } from "./components/ClientePJ/FormClientePJ";
+import { ListaAtivos } from "./components/Ativos/ListaAtivos";
+import { DetalhesAtivo } from "./components/Ativos/DetalhesAtivo";
+import { FormAtivo } from "./components/Ativos/FormAtivo";
 
 
 export function Router() {
@@ -87,7 +90,12 @@ export function Router() {
                         </ClienteProvider>
                     }  />
 
-                <Route path="/ativo" element={<Ativos />} />
+                <Route path="/ativo" element={<ListaAtivos />} />
+                <Route path="/ativo/:ativoId" element={<DetalhesAtivo />} />
+                <Route path="/ativo/:ativoId/editar" element={<FormAtivo />} />
+                <Route path="/ativo/novo" element={<FormAtivo />} />
+
+
                 <Route path="/contrato" element={<Contratos />} />
                 <Route path="/visita" element={<Visitas />} />
                 <Route path="/funcionario" element={<Funcionarios />} />
